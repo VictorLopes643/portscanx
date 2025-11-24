@@ -20,6 +20,7 @@ func hasNmap() bool {
     _, err := exec.LookPath("nmap")
     return err == nil
 }
+
 // Carrega IPs de um arquivo
 func carregarIPs(caminho string) ([]string, error) {
     arquivo, err := os.Open(caminho)
