@@ -1,59 +1,50 @@
-📘 README.md — PortScanX
 # 🔍 PortScanX
-██████╗  ██████╗ ██████╗ ████████╗███████╗ ██████╗ █████╗ ███╗   ██╗██╗  ██╗
-██╔══██╗██╔═══██╗██╔══██╗╚══██╔══╝██╔════╝██╔════╝██╔══██╗████╗  ██║╚██╗██╔╝
-██████╔╝██║   ██║██████╔╝   ██║   ███████╗██║     ███████║██╔██╗ ██║ ╚███╔╝ 
-██╔═══╝ ██║   ██║██╔══██╗   ██║   ╚════██║██║     ██╔══██║██║╚██╗██║ ██╔██╗ 
-██║     ╚██████╔╝██║  ██║   ██║   ███████║╚██████╗██║  ██║██║ ╚████║██╔╝ ██╗
-╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝                         
-                                                                                                     
-        [ Programa ]  PortScanX v1.0
-        [ Autor    ]  Victor Lopes
-        [ LinkedIn ]  linkedin.com/in/victorlopes643
-        [ GitHub   ]  github.com/victorlopes643
 
-PortScanX é um **scanner de portas rápido e simples**, desenvolvido em Go, com foco em:
+markdown
 
-- 🛡️ Segurança ofensiva  
-- ⚡ Alta performance  
-- 📡 Escaneamento de portas TCP  
-- 🧪 Fins educacionais e laboratoriais  
+PortScanX is a **fast and simple port scanner** written in Go, designed with a focus on:
 
-Ideal para pentesters, analistas de segurança e estudantes.
+- Offensive security  
+- High performance  
+- TCP port scanning  
+- Educational and lab environments  
+
+Perfect for pentesters, security analysts, and students.
 
 ---
 
-## 📦 **Características**
+## Features
 
-✔ Escaneia portas individuais ou ranges  
-✔ Suporte a input direto via **IP** ou via **arquivo**  
-✔ Saída clara e organizada  
-✔ Banner estiloso  
-✔ Código simples e fácil de estender  
-✔ Alta velocidade graças à goroutines  
+✔ Scan single ports or port ranges  
+✔ Supports direct input via **IP** or **file list**  
+✔ Clean and organized output  
+✔ Stylish ASCII banner  
+✔ Simple and easy-to-extend code  
+✔ High speed using goroutines  
 
 ---
 
-## 🛠️ **Instalação**
+## Installation
 
-### **Clonando o repositório**
+### Clone the repository
 
 ```sh
 git clone https://github.com/VictorLopes643/portscanx.git
 cd portscanx
-
-Compilando
+Build the binary
+sh
+Copy code
 go build -o portscanx
-
-🚀 Uso
-Modo simples (um alvo):
+Usage
+Simple mode (single target)
+sh
+Copy code
 ./portscanx 192.168.0.1
-
-Alvo via lista:
-./portscanx alvos.txt
-
-Exemplo de arquivo alvos.txt:
+Using a target list
+sh
+Copy code
+./portscanx targets.txt
+Example of targets.txt
+Copy code
 192.168.0.1
 10.0.0.5
-scanme.nmap.org
-
