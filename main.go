@@ -16,6 +16,10 @@ type Job struct {
     IP string
 }
 
+func hasNmap() bool {
+    _, err := exec.LookPath("nmap")
+    return err == nil
+}
 // Carrega IPs de um arquivo
 func carregarIPs(caminho string) ([]string, error) {
     arquivo, err := os.Open(caminho)
@@ -170,6 +174,12 @@ func main() {
 		fmt.Println("  PortScanX hosts.txt")
 		return
 	}
+
+    if hasNmap() {
+        fmt.Println("[+] Nmap detected on the system.")
+    } else {
+        fmt.Println("[-] Nmap is NOT installed.")
+    }
 
     entrada := os.Args[1]
     var ips []string
